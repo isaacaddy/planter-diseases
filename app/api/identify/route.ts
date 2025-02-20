@@ -1,14 +1,14 @@
 // app/api/identify/route.ts
-//const genAI = new GoogleGenerativeAI("AIzaSyBzFx_fD9TwNbUNRdvEmX5NsqkcWVFtgi8");
-// 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
+
 
 import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenerativeAI } from '@google/generative-ai';
-//import OpenAI from "openai";
+import OpenAI from "openai";
 
-const genAI = new GoogleGenerativeAI("AIzaSyC_a-VwHEPfaOY-a3b8FgPSaMW1Y4yzXZA");
+const genAI = new GoogleGenerativeAI("gemini-key");
 
-//const openai = new OpenAI({project: "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"});
+
+const apiKey = process.env.OPENAI_API_KEY;
 
 export async function POST(req: NextRequest) {
   const formData = await req.formData();
