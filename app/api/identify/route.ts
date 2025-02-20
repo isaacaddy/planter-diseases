@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import OpenAI from "openai";
 
-const genAI = new GoogleGenerativeAI("gemini-key");
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 
 
 const apiKey = process.env.OPENAI_API_KEY;
