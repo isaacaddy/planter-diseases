@@ -5,8 +5,16 @@ import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import OpenAI from "openai";
 
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
+// Check if environment variables are defined
+if (!process.env.GOOGLE_API_KEY) {
+  throw new Error('GOOGLE_API_KEY is not defined');
+}
 
+if (!process.env.OPENAI_API_KEY) {
+  throw new Error('OPENAI_API_KEY is not defined');
+}
+
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 
 const apiKey = process.env.OPENAI_API_KEY;
 
