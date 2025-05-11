@@ -1,3 +1,7 @@
+Don't forget to add .env file containing gemini and openai keys
+OPENAI_API_KEY=your_api_key
+GOOGLE_API_KEY=your_api_key
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
